@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/listTasksFragment">
+
+    <fragment
+        android:id="@+id/listTasksFragment"
+        android:name="com.azeupaul.todome.ui.ListTasksFragment"
+        android:label="list_tasks_fragment"
+        tools:layout="@layout/list_tasks_fragment" >
+        <action
+            android:id="@+id/action_listTasksFragment_to_taskInfoFragment"
+            app:destination="@id/taskInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskInfoFragment"
+        android:name="com.azeupaul.todome.ui.TaskInfoFragment"
+        android:label="task_info_fragment"
+        tools:layout="@layout/task_info_fragment" />
+</navigation>
